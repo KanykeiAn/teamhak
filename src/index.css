@@ -1,13 +1,92 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.logo{
+  font-size: 20px;
+  color: pink;
+}
+.back{
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+}
+.admin{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  align-items: center;
+  padding-top: 8vh;
+}
+.search{
+  margin-right: 10vw;
+}
+.cardd{
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  position: relative;
+  border: solid white 1px;
+}
+.imgg{
+  max-width: 100%;
+  min-height: 1150px;
+  max-height: 100%;
+  position: absolute;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bbb{
+  background: url("https://images.pexels.com/photos/3256807/pexels-photo-3256807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+.side{
+  position: relative;
+}
+.pagi{
+  position: relative;
+  background-color: white;
+}
+.ju{
+  color: white !important;
+}
+.nh{
+  position: relative;
+}
+
+@media screen and (max-width: 1450px) {
+  .bbb {
+    background-color: black;
+    width: 100%;
+  }
+  .advertising_left img {
+    width: 100%;
+  }
+}
+
+.lll{
+  width: 25px;
+}
+.bebe{
+  width: 100%;
+  position: absolute;
+}
+.bebeb{
+  max-height: 700px;
+  width: 100%;
+  position: absolute;
+  opacity: .5;
+}
+.mj{
+  background-color: rgb(4, 4, 4) !important;
+  color: white !important;
+}
+.jkl{
+  position: relative;
+  opacity: .7;
 }
