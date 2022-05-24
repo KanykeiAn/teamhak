@@ -1,0 +1,58 @@
+.credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .inp1 {
+    margin-top: 10px;
+    width: 400px;
+    height: 65px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    justify-content: center;
+  }
+  
+  .inp2 {
+    width: 400px;
+    height: 65px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    justify-content: center;
+  }
+  .inp3 {
+    width: 400px;
+    height: 65px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    justify-content: center;
+  }
+  .inp4 {
+    width: 400px;
+    height: 65px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    justify-content: center;
+  }
+  .card-text {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font: 2em sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(119, 114, 114);
+    font-weight: 500;
+  }

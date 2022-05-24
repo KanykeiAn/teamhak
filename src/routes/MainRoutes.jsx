@@ -8,9 +8,10 @@ import ProductDetailsPage from '../pages/ProductDetailsPage';
 import EditProductPage from '../pages/EditProductPage';
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
-import AboutUsPage from '../pages/AboutUsPage';
 import ProductsPage from '../pages/ProductsPage';
 import PayCard from '../components/payCard/PayCard';
+import Login from '../components/auth/Login';
+import Registration from '../components/auth/Registration';
 
 
 const MainRoutes = () => {
@@ -27,34 +28,39 @@ const MainRoutes = () => {
             id: 2,
         },
         {
-            link: '/about',
-            element: <AboutUsPage />,
-            id: 3,
-        },
-        {
             link: '/products',
             element: <ProductsPage />,
-            id: 4,
+            id: 3,
         },
         {
             link: '/admin',
             element: <AdminPage />,
-            id: 5,
+            id: 4,
         },
         {
             link: '/cart',
             element: <CartPage />,
-            id: 6,
+            id: 5,
         },
         {
             link: '/products/:id',
             element: <ProductDetailsPage />,
-            id: 7,
+            id: 6,
           },
           {
             link: '/paycard',
             element: <PayCard />,
+            id: 7,
+          },
+          {
+            link: '/login',
+            element: <Login />,
             id: 8,
+          },
+          {
+            link: '/register',
+            element: <Registration />,
+            id: 9,
           },
     ]
 

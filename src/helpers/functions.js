@@ -10,3 +10,4 @@ export function getCountProductsInCart() {
       return (ac += cur.subPrice);
     }, 0);
   };
+  

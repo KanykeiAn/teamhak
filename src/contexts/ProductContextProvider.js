@@ -29,8 +29,8 @@ const reducer = (state = INIT_STATE, action) => {
 const ProductContexProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const getProducts = async () => {
     const { data } = await axios(
