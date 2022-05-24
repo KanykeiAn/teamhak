@@ -1,18 +1,15 @@
-import React from 'react';
-import Home from '../components/home/Home';
-import Footer from '../components/footer/Footer';
+import React from "react";
 
-
-
-
+import Footer from "../components/footer/Footer";
+import SectionFirst from "../components/home/SectionFirst";
 
 const HomePage = () => {
-    return (
-     <>
-     <Home/>
-     <Footer/>
-     </>
-    );
+  return (
+    <>
+      <SectionFirst />
+      <Footer />
+    </>
+  );
 };
 
 export default HomePage;
