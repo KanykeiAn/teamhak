@@ -1,105 +1,100 @@
 .main-footer {
-    color: white;
-    background: #101418;
-    /* padding-top: 9em; */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    /* display: flex;
-      justify-content: space-around; */
-        /* position: absolute; */
-        left: 0px;
-        /* top: 150px; */
-      
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .lis_unstyled li {
-    list-style: none;
-  }
-  
-  .list-unstyled {
-    text-decoration: none;
-  }
-  .container {
-    /* display: flex;
-      flex-direction: column; */
-    min-height: 35vh;
-    /* margin-bottom: -50px; */
-  }
-  
+  color: white;
+  background: #f1f1f1;
+  /* padding-top: 9em; */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-around;  */
+  /* position: absolute; */
+  left: 0px;
+  top: 150px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lis_unstyled li {
+  list-style: none;
+}
+
+.list-unstyled {
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  margin-bottom: -50px;
+  color: black;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+.card,
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.144);
+  border-radius: 15px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.205),
+    inset 0 20px 20px rgba(253, 253, 253, 0.205);
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.336);
+  position: relative;
+  transition: box-shadow 0.4s, color 0.8s, transform 0.4s;
+}
+
+.card:hover,
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover {
+  color: #e89417;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.205),
+    inset 0 20px 10px rgba(255, 255, 255, 0.287),
+    inset 10px 0 20px rgb(255, 58, 58), inset -20px 0 20px rgb(104, 255, 58),
+    inset -30px 0 20px rgb(71, 58, 255);
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 690px) {
   .icons {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: row;
-    margin-bottom: 25px;
+    margin-top: 25px;
   }
-  
-  .card,
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6 {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.144);
-    border-radius: 15px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.205),
-      inset 0 20px 20px rgba(253, 253, 253, 0.205);
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2em;
-    color: rgba(255, 255, 255, 0.336);
-    position: relative;
-    transition: box-shadow 0.4s, color 0.8s, transform 0.4s;
+}
+
+@media screen and (max-width: 545px) {
+  .icons {
+    display: none;
   }
-  
-  .card:hover,
-  .card1:hover,
-  .card2:hover,
-  .card3:hover,
-  .card4:hover,
-  .card5:hover,
-  .card6:hover {
-    color: #e89417;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.205),
-      inset 0 20px 10px rgba(255, 255, 255, 0.287),
-      inset 10px 0 20px rgb(255, 58, 58), inset -20px 0 20px rgb(104, 255, 58),
-      inset -30px 0 20px rgb(71, 58, 255);
-    transform: translateY(-10px);
+
+  .row {
+    flex-wrap: wrap;
+    margin-bottom: 25vh;
   }
-  
-   @media screen and (max-width: 690px) {
-    .icons {
-      margin-top: 25px;
-    }
+  .row2 {
+    display: none;
   }
-  
-  @media screen and (max-width: 545px) {
-    .icons {
-      display: none;
-    }
-    
-     .row {
-      flex-wrap: wrap;
-      margin-bottom: 25vh;
-    }
-    .row2 {
-      display: none;
-    }
-  }
-  
-  
-  
-  
-  
+}

@@ -1,47 +1,48 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { Link,NavLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContextProvider';
-import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
-import { Badge } from '@mui/material';
-import { getCountProductsInCart } from '../../helpers/functions';
-import { useCart } from '../../contexts/CartContextProvider';
-import { ADMIN } from '../../helpers/consts';
-import Search from './Search';
-
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SideBar from '../../components/product/SideBar'; 
+import { Badge } from "@mui/material";
+import { getCountProductsInCart } from "../../helpers/functions";
+import { useCart } from "../../contexts/CartContextProvider";
+import { ADMIN } from "../../helpers/consts";
+import Search from "./Search";
 
 const pages = [
-  { name: 'О нас', link: '/about', id: 1 },
-  { name: 'Продукты', link: '/products', id: 2 }
-
+  { name: "About Us", link: "/about", id: 1 },
+  { name: "Novelties", link: "/novelties", id: 2 },
+  { name: "Novella", link: "/novella", id: 3 },
+  { name: "Auth", link: "/auth", id: 4 },
 ];
 
-
 const Navbar = () => {
+
+  const { user, checkAuth, logout } = useAuth();
+
+  const navigate = useNavigate();
+
+
+  React.useEffect(() => {
+    if (localStorage.getItem('token')) {
+      checkAuth();
+    }
+  }, []);
+
   const {
     handleLogout,
     user: { email },
   } = useAuth();
-
-  const { user, checkAuth, logout } = useAuth(); 
- 
-  React.useEffect(() => { 
-    if (localStorage.getItem('token')) { 
-      checkAuth(); 
-    } 
-  }, []); 
- 
-  const navigate = useNavigate(); 
-
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -61,23 +62,23 @@ const Navbar = () => {
   }, [addProductToCart]);
 
   return (
-    <AppBar position="static" elevation={3}>
-      <Container maxWidth="xl" sx={{ background: '#263238'
-   }} >
+    <AppBar position="static" elevation={3} sx={{ flexGrow: 1 }}>
+      <Container maxWidth="xl" sx={{ background: "#f1f1f1" }}>
         <Toolbar disableGutters className="appbar">
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-          <Link to="/"> <p className='logo'>Sweetie</p></Link>
-           
+            <Link to="/">
+              {" "}
+              <p className="logo">Renobolib</p>
+            </Link>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, ms: 2, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, ms: 2, display: { xs: "flex", md: "none" } }}>
             <IconButton
-
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -90,19 +91,19 @@ const Navbar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-                color: '#efebe9',
+                vertical: "bottom",
+                horizontal: "left",
+                color: "#262424",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
               <Box>
@@ -111,10 +112,10 @@ const Navbar = () => {
                     <Link to={page.link}>
                       <Typography
                         sx={{
-                          ml: '0',
+                          ml: "0",
                           my: 1,
-                          color: '#efebe9',
-                          display: 'block',
+                          color: "#262424",
+                          display: "block",
                         }}
                       >
                         {page.name}
@@ -123,14 +124,13 @@ const Navbar = () => {
                   </MenuItem>
                 ))}
               </Box>
-              
             </Menu>
           </Box>
           <Box
             sx={{
-              justifyContent: 'left',
+              justifyContent: "left",
               flexGrow: 1,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: "none", md: "flex" },
             }}
           >
             {pages.map((page) => (
@@ -138,65 +138,73 @@ const Navbar = () => {
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
-                    ml: 'auto',
+                    ml: "auto",
                     my: 2,
-                    color: '#efebe9',
-                    display: 'block',
-                    fontWeight: 'bold',
+                    color: "#262424",
+                    display: "block",
+                    fontWeight: "bold",
                   }}
                 >
                   {page.name}
                 </Button>
               </Link>
-            ))} 
+            ))}
 
-              {/* <Product /> */}
+            <SideBar />
+
+            {/* <Product /> */}
 
             {email == ADMIN ? (
               <Link to="/admin">
-                <Button sx={{ my: 2, color: '#efebe9' }}>ADMIN PAGE</Button>
+                <Button sx={{ my: 2, color: "#262424" }}>ADMIN PAGE</Button>
               </Link>
             ) : (
               <Link to="/cart">
-                <Button sx={{ my: 2, color: 'black' }}>
+                <Button sx={{ my: 2, color: "#262424" }}>
+                  <img
+                    className="lll"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
+                    alt="favorites"
+                  />
+
                   <Badge badgeContent={count} color="error">
-                    <img className='lll' src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png" alt="" />
+                    <ShoppingCartIcon
+                      sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
+                    />
                   </Badge>
                 </Button>
               </Link>
-            )}
+             )} 
           </Box>
 
-            <Search />
+          <Search />
 
-          <Box sx={{ flexGrow: 0 }}>
-              {user ? ( 
-                <Button 
-                  color="inherit" 
-                  sx={{ color: 'white' }} 
-                  onClick={() => { 
-                    logout(); 
-                    navigate('/login'); 
-                  }} 
-                > 
-                  Logout 
-                </Button> 
-              ) : ( 
-                <> 
-                  <NavLink to="/login"> 
-                    <Button color="inherit" sx={{ color: 'white' }}> 
-                      Login 
-                    </Button> 
-                  </NavLink> 
-    
-                  <NavLink to="/register"> 
-                    <Button color="inherit" sx={{ color: 'white' }}> 
-                      Register 
-                    </Button> 
-                  </NavLink> 
-                </> 
-              )} 
-          </Box>
+          {user ? (
+            <Button
+              color="inherit"
+              sx={{ color: 'black' }}
+              onClick={() => {
+                logout();
+                navigate('/login');
+              }}
+            >
+              Logout
+            </Button>
+          ) : (
+            <>
+              <NavLink to="/login">
+                <Button color="inherit" sx={{ color: 'dark' }}>
+                  Login
+                </Button>
+              </NavLink>
+
+              <NavLink to="/register">
+                <Button color="inherit" sx={{ color: 'dark' }}>
+                  Register
+                </Button>
+              </NavLink>
+            </>
+          )}
         </Toolbar>
       </Container>
     </AppBar>

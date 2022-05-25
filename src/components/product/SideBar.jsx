@@ -1,89 +1,53 @@
-import { Grid, InputAdornment, Paper, TextField } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import SearchIcon from '@mui/icons-material/Search';
-import { useSearchParams } from 'react-router-dom';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import { FormControl} from '@mui/material';
+import React from 'react';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import { Box } from '@mui/system';
+import SideBarSort from './SideBarSort';
+
+// import SearchIcon from '@mui/icons-material/Search';
 import { useProducts } from '../../contexts/ProductContextProvider';
 
+
 const SideBar = () => {
-  const { fetchByParams } = useProducts();
+
+
+  const [state, setState] = React.useState(''); 
+
+  const handleChange = (event) => {
+    setState(event.target.value);
+  }
+
+  // const { searchFilter } = useProducts();
+
 
 
   return (
-    <Grid item md={2} className="side">
-      <Paper elevation={5} sx={{ p: 2 }}>
-        <Grid>
-          <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">Продукт</FormLabel>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="all"
-              name="radio-buttons-group"
-              onChange={(e) => fetchByParams('type', e.target.value)}
-            >
-              <FormControlLabel value="all" control={<Radio />} label="все" />
+    <>
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
+     
+    <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-standard-label">Filter</InputLabel>
+        <Select
+          labelId="demo-simple-select-standard-label"
+          id="demo-simple-select-standard"
+          value={state}
+          onChange={handleChange}
+        >
+          <MenuItem value={'price'}>Price</MenuItem>
+          <MenuItem value={'genres'}>Genres</MenuItem>
+        </Select>
+      </FormControl>
+     
 
-              <FormControlLabel
-                value="Макарон"
-                control={<Radio />}
-                label="Макарон"
-              />
+    
+    <SideBarSort state={state} />
 
-              <FormControlLabel
-                value="Торты"
-                control={<Radio />}
-                label="Торты"
-              />
 
-              <FormControlLabel
-                value="Мороженое"
-                control={<Radio />}
-                label="Мороженое"
-              />
-
-              <FormControlLabel
-                value="Напитки"
-                control={<Radio />}
-                label="Напитки"
-              />
-            </RadioGroup>
-          </FormControl>
-        </Grid>
-
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Цена</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="all"
-            name="radio-buttons-group"
-            onChange={(e) => fetchByParams('price_lte', e.target.value)}
-          >
-            <FormControlLabel value="all" control={<Radio />} label="все" />
-            <FormControlLabel
-              value="200"
-              control={<Radio />}
-              label="меньше 200с"
-            />
-
-            <FormControlLabel
-              value="500"
-              control={<Radio />}
-              label="меньше 500с"
-            />
-
-            <FormControlLabel
-              value="1300"
-              control={<Radio />}
-              label="меньше 1300с"
-            />
-          </RadioGroup>
-        </FormControl>
-      </Paper>
-    </Grid>
+    </Box>
+ </>
   );
 };
 

@@ -1,13 +1,19 @@
 export const ACTIONS = {
-    GET_PRODUCTS: 'GET_PRODUCTS',
-    GET_PRODUCT_DETAILS: 'GET_PRODUCT_DETAILS',
-  };
-  
-  export const CART = {
-    GET_CART: 'GET_CART',
-    GET_CART_LENGTH: 'GET_CART_LENGTH',
-  };
-  export const JSON_API_PRODUCTS = 'https://mighty-ocean-08722.herokuapp.com/api/v1/novella/';
-  
-  export const ADMIN = 'admin@gmail.com';
-  
+  GET_PRODUCTS: "GET_PRODUCTS",
+  GET_PRODUCT_DETAILS: "GET_PRODUCT_DETAILS",
+  GET_COMMENTS: "GET_COMMENTS",
+};
+
+export const CART = {
+  GET_CART: "GET_CART",
+  GET_CART_LENGTH: "GET_CART_LENGTH",
+};
+export const FAVORITES = {
+  GET_FAVORITES: "GET_FAVORITES",
+  GET_FAVORITES_LENGTH: "GET_FAVORITES_LENGTH",
+};
+
+export const JSON_API_PRODUCTS = "https://mighty-ocean-08722.herokuapp.com/api/v1/novella/";
+
+export const JSON_API_PRODUCTS2 = "https://mighty-ocean-08722.herokuapp.com/api/v1/";
+export const ADMIN = "admin@gmail.com";
