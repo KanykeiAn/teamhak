@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Badge } from "@mui/material";
 import { getCountProductsInCart } from "../../helpers/functions";
 import { useCart } from "../../contexts/CartContextProvider";
@@ -61,7 +61,10 @@ const Navbar = () => {
           >
             <Link to="/">
               {" "}
-              <p className="logo">Renobolib</p>
+              <img
+                src="https://images.ctfassets.net/8cd2csgvqd3m/3o6RN06GNoDMAyJhVqftSZ/4822ba988465f56310bddec0f4151bd2/B_O_Black.svg"
+                alt="kk"
+              />
             </Link>
           </Typography>
 
@@ -145,21 +148,28 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: "#262424" }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-              <Link to="/cart">
-                <Button sx={{ my: 2, color: "#262424" }}>
-                  <img
-                    className="lll"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
-                    alt="favorites"
-                  />
+              <>
+                <Link to="/cart">
+                  <Button sx={{ my: 2, color: "#262424" }}>
+                    <Badge badgeContent={count} color="error">
+                      <ShoppingCartIcon
+                        sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
+                      />
+                    </Badge>
+                  </Button>
+                </Link>
 
-                  <Badge badgeContent={count} color="error">
-                    <ShoppingCartIcon
-                      sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
-                    />
-                  </Badge>
-                </Button>
-              </Link>
+                
+                <Link to="/favorites">
+                  <Button sx={{ my: 2, color: "#262424" }}>
+                    <Badge badgeContent={count} color="error">
+                      <FavoriteBorderIcon
+                        sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
+                      />
+                    </Badge>
+                  </Button>
+                </Link>
+              </>
             )}
           </Box>
 
