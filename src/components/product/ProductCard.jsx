@@ -48,7 +48,7 @@ export default function ProductCard({ item }) {
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ color: 'green', fontWeight: '700' }}
+          sx={{ color: "green", fontWeight: "700" }}
         >
           {item.price}c
         </Typography>
@@ -58,11 +58,11 @@ export default function ProductCard({ item }) {
           color="text.secondary"
           onClick={() => navigate(`/products/${item.id}`)}
           sx={{
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            display: '-webkit-box',
-            WebkitLineClamp: '3',
-            WebkitBoxOrient: 'vertical',
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitLineClamp: "3",
+            WebkitBoxOrient: "vertical",
           }}
         >
           {item.description}
