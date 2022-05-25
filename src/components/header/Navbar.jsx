@@ -9,10 +9,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SideBar from '../../components/product/SideBar'; 
 import { Badge } from "@mui/material";
 import { getCountProductsInCart } from "../../helpers/functions";
 import { useCart } from "../../contexts/CartContextProvider";
@@ -22,11 +22,23 @@ import Search from "./Search";
 const pages = [
   { name: "About Us", link: "/about", id: 1 },
   { name: "Novelties", link: "/novelties", id: 2 },
-  { name: "Products", link: "/products", id: 3 },
+  { name: "Novella", link: "/novella", id: 3 },
   { name: "Auth", link: "/auth", id: 4 },
 ];
 
 const Navbar = () => {
+
+  const { user, checkAuth, logout } = useAuth();
+
+  const navigate = useNavigate();
+
+
+  React.useEffect(() => {
+    if (localStorage.getItem('token')) {
+      checkAuth();
+    }
+  }, []);
+
   const {
     handleLogout,
     user: { email },
@@ -50,7 +62,7 @@ const Navbar = () => {
   }, [addProductToCart]);
 
   return (
-    <AppBar position="static" elevation={3}>
+    <AppBar position="static" elevation={3} sx={{ flexGrow: 1 }}>
       <Container maxWidth="xl" sx={{ background: "#f1f1f1" }}>
         <Toolbar disableGutters className="appbar">
           <Typography
@@ -61,10 +73,7 @@ const Navbar = () => {
           >
             <Link to="/">
               {" "}
-              <img
-                src="https://images.ctfassets.net/8cd2csgvqd3m/3o6RN06GNoDMAyJhVqftSZ/4822ba988465f56310bddec0f4151bd2/B_O_Black.svg"
-                alt="kk"
-              />
+              <p className="logo">Renobolib</p>
             </Link>
           </Typography>
 
@@ -141,6 +150,8 @@ const Navbar = () => {
               </Link>
             ))}
 
+            <SideBar />
+
             {/* <Product /> */}
 
             {email == ADMIN ? (
@@ -148,49 +159,52 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: "#262424" }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-              <>
-                <Link to="/cart">
-                  <Button sx={{ my: 2, color: "#262424" }}>
-                    <Badge badgeContent={count} color="error">
-                      <ShoppingCartIcon
-                        sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
-                      />
-                    </Badge>
-                  </Button>
-                </Link>
+              <Link to="/cart">
+                <Button sx={{ my: 2, color: "#262424" }}>
+                  <img
+                    className="lll"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
+                    alt="favorites"
+                  />
 
-                
-                <Link to="/favorites">
-                  <Button sx={{ my: 2, color: "#262424" }}>
-                    <Badge badgeContent={count} color="error">
-                      <FavoriteBorderIcon
-                        sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
-                      />
-                    </Badge>
-                  </Button>
-                </Link>
-              </>
-            )}
+                  <Badge badgeContent={count} color="error">
+                    <ShoppingCartIcon
+                      sx={{ fontSize: "30px", mt: "1px", mr: "10px" }}
+                    />
+                  </Badge>
+                </Button>
+              </Link>
+             )} 
           </Box>
 
           <Search />
 
-          <Box sx={{ flexGrow: 0 }}>
-            {email ? (
-              <Button
-                sx={{ color: "#262424", fontWeight: "bold" }}
-                onClick={handleLogout}
-              >
-                LOGOUT
-              </Button>
-            ) : (
-              <Link to="/auth">
-                <Button sx={{ color: "#262424", fontWeight: "bold" }}>
-                  LOGIN
+          {user ? (
+            <Button
+              color="inherit"
+              sx={{ color: 'black' }}
+              onClick={() => {
+                logout();
+                navigate('/login');
+              }}
+            >
+              Logout
+            </Button>
+          ) : (
+            <>
+              <NavLink to="/login">
+                <Button color="inherit" sx={{ color: 'dark' }}>
+                  Login
                 </Button>
-              </Link>
-            )}
-          </Box>
+              </NavLink>
+
+              <NavLink to="/register">
+                <Button color="inherit" sx={{ color: 'dark' }}>
+                  Register
+                </Button>
+              </NavLink>
+            </>
+          )}
         </Toolbar>
       </Container>
     </AppBar>

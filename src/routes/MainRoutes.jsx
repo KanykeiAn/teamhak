@@ -8,12 +8,15 @@ import ProductDetailsPage from "../pages/ProductDetailsPage";
 import EditProductPage from "../pages/EditProductPage";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
-import AboutUsPage from "../pages/AboutUsPage";
+// import AboutUsPage from "../pages/AboutUsPage";
 import ProductsPage from "../pages/ProductsPage";
 import PayCard from "../components/payCard/PayCard";
 
 import NoveltiesPage from "../pages/NoveltiesPage";
 import FavoritesPage from "../pages/FavoritesPage";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Registration";
+import Activation from "../components/auth/Activation";
 
 const MainRoutes = () => {
   const { user } = useAuth();
@@ -28,11 +31,11 @@ const MainRoutes = () => {
       element: <HomePage />,
       id: 2,
     },
-    {
-      link: "/about",
-      element: <AboutUsPage />,
-      id: 3,
-    },
+    // {
+    //   link: "/about",
+    //   element: <AboutUsPage />,
+    //   id: 3,
+    // },
 
     {
       link: "/novelties",
@@ -40,7 +43,7 @@ const MainRoutes = () => {
       id: 4,
     },
     {
-      link: "/products",
+      link: "/novella",
       element: <ProductsPage />,
       id: 5,
     },
@@ -70,6 +73,26 @@ const MainRoutes = () => {
       element: <FavoritesPage />,
       id: 10,
     },
+    {
+      link: "/login",
+      element: <Login />,
+      id: 11,
+    },
+    {
+      link: "/register",
+      element: <Register />,
+      id: 12,
+    },
+    {
+      link: "/activation",
+      element: <Activation />,
+      id: 13,
+    },
+    // {
+    //   link: "/logout",
+    //   element: <Acti />,
+    //   id: 13,
+    // },
   ];
 
   const PRIVATE_ROUTES = [

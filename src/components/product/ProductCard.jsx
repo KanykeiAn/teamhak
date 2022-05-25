@@ -1,48 +1,50 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { useNavigate } from "react-router-dom";
-import { useProducts } from "../../contexts/ProductContextProvider";
-import { IconButton } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
-import { useCart } from "../../contexts/CartContextProvider";
-import { useAuth } from "../../contexts/AuthContextProvider";
-import { ADMIN } from "../../helpers/consts";
-import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
-import { useFavorites } from "../../contexts/FavoritesContextProvider";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
+import { useProducts } from '../../contexts/ProductContextProvider';
+import { IconButton } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from '../../contexts/CartContextProvider';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+// import { MoreHoriz } from '@mui/icons-material';
+// import { Box } from '@mui/system';
+// import { ADMIN } from '../../helpers/consts';
+// import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
 
-  const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart } = useCart();
-  const { addProductToFavorites, checkProductInFavorites } = useFavorites();
+  // const { userName } = useAuth();
+  const { deleteProduct,toggleLike } = useProducts();
 
-  const {
-    handleLogout,
-    user: { email },
-  } = useAuth();
-  console.log(email);
+  // const {
+  //   handleLogout,
+  //   user: { email },
+  // } = useAuth();
+  // console.log(email);
 
   return (
-    <Card sx={{ maxWidth: 330 }} className="cardd">
+    <Card sx={{ maxWidth: 330 }} className="cardd" >
       <CardMedia
         component="img"
         height="250"
-        image={item.picture}
-        alt={item.name}
+        image={item.images}
+        alt={item.title}
+        onClick={() => navigate(`/novella/${item.id}`)}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {item.name}
+          {item.title}
         </Typography>
 
-        <Typography
+        {/* <Typography
           gutterBottom
           variant="h5"
           component="div"
@@ -64,10 +66,10 @@ export default function ProductCard({ item }) {
           }}
         >
           {item.description}
-        </Typography>
+        </Typography> */}
       </CardContent>
       <CardActions>
-        {email == ADMIN ? (
+        {/* {email == ADMIN ? ( */}
           <>
             <Button size="small" onClick={() => deleteProduct(item.id)}>
               Delete
@@ -77,21 +79,17 @@ export default function ProductCard({ item }) {
               Edit
             </Button>
           </>
-        ) : (
+        {/* ) : ( */}
           <>
-            <IconButton onClick={() => addProductToCart(item)}>
-              <ShoppingCartIcon
-                color={checkProductInCart(item.id) ? "primary" : ""}
-              />
-            </IconButton>
-
-            <IconButton onClick={() => addProductToFavorites(item)}>
-              <FavoriteBorder
-                color={checkProductInFavorites(item.id) ? "primary" : ""}
-              />
-            </IconButton>
+          <IconButton onClick={() => addProductToCart(item)}>
+            <ShoppingCartIcon
+              color={checkProductInCart(item.id) ? 'primary' : ''}
+            />
+          </IconButton>
+          <ThumbUpAltIcon  sx={{cursor: 'pointer'}} onClick={()=>toggleLike(item.id)}
+            />{item.likes}
           </>
-        )}
+        {/* )} */}
       </CardActions>
     </Card>
   );

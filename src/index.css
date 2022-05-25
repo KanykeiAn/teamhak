@@ -42,9 +42,7 @@ a{
   
 }
 
-.bbb{
-  background: url("https://images.pexels.com/photos/3256807/pexels-photo-3256807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
+
 .side{
   position: relative;
 }
@@ -89,4 +87,7 @@ a{
 .jkl{
   position: relative;
   opacity: .7;
+}
+.nhnh{
+  color: black;
 }

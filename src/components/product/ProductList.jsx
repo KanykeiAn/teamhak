@@ -1,72 +1,89 @@
-import { BottomNavigation, Grid, Pagination } from '@mui/material';
-import { Box } from '@mui/system';
-import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Box, Pagination, } from '@mui/material';
+import React, { useEffect } from 'react';
+import ProductCard from '../product/ProductCard';
 import { useProducts } from '../../contexts/ProductContextProvider';
-import ProductCard from './ProductCard';
+import { useSearchParams } from 'react-router-dom';
+
+
 
 const ProductList = () => {
-  const { products, getProducts } = useProducts();
-  const [searchParams, setSearchParams] = useSearchParams();
+
+  const { products, getProducts, page, setPage, count } = useProducts();
+
+  const [searchParams] = useSearchParams();
+
+
+
 
   useEffect(() => {
     getProducts();
+
+
   }, []);
 
   useEffect(() => {
     getProducts();
-    setPage(1);
-  }, [searchParams]);
 
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 6;
-  const count = Math.ceil(products.length / itemsPerPage);
+  }, [page, searchParams]); 
+
+
 
   const handleChange = (e, p) => {
-    console.log(p);
-    setPage(p);
-  };
-  // pagination
+    setPage(p)
 
-  function currentData() {
-    const begin = (page - 1) * itemsPerPage;
-    const end = begin + itemsPerPage;
-    return products.slice(begin, end);
   }
+
+
+
+
 
   return (
     <>
-      <Grid
-        item
-        sx={{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap' }}
-        md={9}
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+    
+          justifyContent: 'space-evenly',
+         flexDirection: 'column'
+        }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            minHeight: '40vh',
-            mb: '3.5vh',
-          }}
-        >
-          {products ? (
-            currentData().map((item) => (
-              <ProductCard item={item} key={item.id} />
-            ))
-          ) : (
-            <h2>Loading...</h2>
-          )}
-        </Box>
+       <Box sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+         
+          justifyContent: 'space-evenly',
+         
+        }}>
+        {products ? (
 
-        <Pagination
-          className='pagi'
-          count={count}
-          variant="outlined"
-          shape="rounded"
-          onChange={handleChange}
-          page={page}
-        />
-      </Grid>
+          (products.results || products).map((item) => {
+
+            return (
+              <ProductCard item={item} key={item.id} />
+
+
+            )
+          })
+        ) : (
+          <h2>Loading...</h2>
+        )}
+  </Box>
+        {products.results ? (
+
+          <Box sx={{ textAlign: 'center' }}>
+
+
+            <Box my={3} display="flex" justifyContent="center">
+              <Pagination count={count} page={page} onChange={handleChange} />
+            </Box>
+          </Box>
+
+        ) : ('')
+        }
+
+      </Box>
+
     </>
   );
 };

@@ -1,292 +1,292 @@
 {
-    "products": [
-      {
-        "name": "Ягодный микс",
-        "description": "Чернично-смородиновые макаронс",
-        "price": 120,
-        "picture": "https://images.pexels.com/photos/3969250/pexels-photo-3969250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "type": "Макарон",
-        "id": 1
-      },
-      {
-        "name": "Шоколадные",
-        "description": "Шоколадные макаронс с карамельной начинкой",
-        "price": "120",
-        "picture": "https://images.pexels.com/photos/5176995/pexels-photo-5176995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 2
-      },
-      {
-        "name": "Клубничка",
-        "description": "Клубничные макаронс со сливочной начинкой",
-        "price": 120,
-        "picture": "https://images.pexels.com/photos/5720907/pexels-photo-5720907.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 3
-      },
-      {
-        "name": "Крем-брюле",
-        "description": "Сливочные макаронс со вкусом крем-брюле",
-        "price": 120,
-        "picture": "https://images.pexels.com/photos/8625954/pexels-photo-8625954.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 4
-      },
-      {
-        "name": "Малиновые",
-        "description": "Воздушные макаронс с малиновой начинкой",
-        "price": 120,
-        "picture": "https://images.pexels.com/photos/11065339/pexels-photo-11065339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 5
-      },
-      {
-        "name": "Лимонные",
-        "description": "Нежнейшие макаронс со сливочно-лимонной начинкой",
-        "price": 120,
-        "picture": "https://images.pexels.com/photos/3969253/pexels-photo-3969253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 6
-      },
-      {
-        "name": "Карамельно-шоколадный микс",
-        "description": "Шоколадные макаронс с карамельной начинкой",
-        "price": 450,
-        "picture": "https://images.pexels.com/photos/7440175/pexels-photo-7440175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 7
-      },
-      {
-        "name": "Ягодное ассорти",
-        "description": "Ягодно-сливочное ассорти",
-        "price": 450,
-        "picture": "https://images.pexels.com/photos/7296705/pexels-photo-7296705.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 8
-      },
-      {
-        "name": "Шоколадное ассорти",
-        "description": "Шоколадное ассорти со сливочной начинкой",
-        "price": 450,
-        "picture": "https://images.pexels.com/photos/8718009/pexels-photo-8718009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 9
-      },
-      {
-        "name": "Яркая композиция",
-        "description": "Фруктово-ягодное ассорти со сливочной начинкой",
-        "price": 450,
-        "picture": "https://images.pexels.com/photos/6277485/pexels-photo-6277485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 10
-      },
-      {
-        "name": "Ореховое ассорти",
-        "description": "Воздушные макаронс со вкусом фисташки",
-        "price": 500,
-        "picture": "https://images.pexels.com/photos/8963942/pexels-photo-8963942.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 11
-      },
-      {
-        "name": "Ягодно-шоколадное ассорти",
-        "description": "Шоколадные макаронс с ягодным вкусом",
-        "price": 500,
-        "picture": "https://svetofor.info/images/thumbnails/500/500/detailed/74/apple-iphone-se-silver_2c7c-lk.jpghttps://images.pexels.com/photos/5786389/pexels-photo-5786389.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Макарон",
-        "id": 12
-      },
-      {
-        "name": "Бисквитный торт со сливочным кремом",
-        "description": "Сочетание кексовых коржей, белого шоколада и вкуснейшей солоной карамели",
-        "price": 850,
-        "picture": "https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Торты",
-        "id": 13
-      },
-      {
-        "name": "Чизкейк New-York",
-        "description": "Легендарный сливочный вкус! Сочетание творожно-сливочной массы и плотного песочного коржа",
-        "price": 1300,
-        "picture": "https://images.pexels.com/photos/162688/cheesecake-table-dessert-cream-162688.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Торты",
-        "id": 14
-      },
-      {
-        "name": "Тирамису",
-        "description": "Легендарный вкус воплощён в нежном торте с сыром Маскарпоне и украшен какао посыпкой",
-        "price": 1200,
-        "picture": "https://images.pexels.com/photos/7783243/pexels-photo-7783243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Торты",
-        "id": 15
-      },
-      {
-        "name": "Свадебный медовик",
-        "description": "Класический медовик со сливочным кремом и ягодами украсят важное торжество.",
-        "price": 25000,
-        "picture": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "type": "Торты",
-        "id": 16
-      },
-      {
-        "name": "Шоколадный",
-        "description": "Нежный бисквит с шоколадной начинкой. Сверху покрыт толстым слоем шоколада.",
-        "price": 2500,
-        "picture": "https://images.pexels.com/photos/11076351/pexels-photo-11076351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "type": "Торты",
-        "id": 17
-      },
-      {
-        "name": "Красный бархат",
-        "description": "Трехслойный торт с шоколадными прослойками и нежнейшим сливочным кремом с белым шоколадом.",
-        "price": 2500,
-        "picture": "https://cheese-cake.ru/DesertImg/tort-red-velvet-3-2-1.jpg",
-        "type": "Торты",
-        "id": 18
-      },
-      {
-        "name": "Праздничный",
-        "description": "Трехслойный торт на основе ягодного мусса с белым шоколадом и оригинальным дизайном.",
-        "price": 3000,
-        "picture": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "type": "Торты",
-        "id": 19
-      },
-      {
-        "name": "Вупи пай",
-        "description": "Праздничный торт Whoopie Pie украшенный свежими ягодами, печеньм Орео и шоколадками.",
-        "price": 2100,
-        "picture": "https://www.tortfamily.ru/image/cache/data/catalog/prazdnichnye/p1614-500x500.jpg",
-        "type": "Торты",
-        "id": 20
-      },
-      {
-        "name": "Мороженое Бельгийский шоколад",
-        "description": "Пломбир с темным бельгийским шоколадом",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskij-shokolad-2-1.jpg",
-        "type": "Мороженое",
-        "id": 21
-      },
-      {
-        "name": "Мороженое Крем-карамель",
-        "description": "Мороженое со сливочным ароматом и соусом из мягкой карамели",
-        "price": "22222222",
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-krem-karamel-2-0.jpg",
-        "type": "Мороженое",
-        "id": 22
-      },
-      {
-        "name": "Мороженое кофе со сливками",
-        "description": "Сливочное мороженое и кофейное мороженое с кусочками кофейного шоколада.",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertThumb/morozhenoe-kofe-so-slivkami-2-320x320.jpg",
-        "type": "Мороженое",
-        "id": 23
-      },
-      {
-        "name": "Мороженое Черная и белая вишня",
-        "description": "Сливочное вишневое мороженое с йогуртом и насыщенный вишневый сорбет с кусочками вишни",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-chernaya-i-belaya-vishnyaspdc-0.jpg",
-        "type": "Мороженое",
-        "id": 24
-      },
-      {
-        "name": "Мороженое Бельгийское карамельное печенье",
-        "description": "Сливочное карамельное мороженое с кусочками традиционного бельгийского сахарного печенья с корицей.",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-karamelnoe-pechenespec-0.jpg",
-        "type": "Мороженое",
-        "id": 25
-      },
-      {
-        "name": "Мороженое Бельгийское карамельное печенье",
-        "description": "Сливочное карамельное мороженое с кусочками традиционного бельгийского сахарного печенья с корицей.",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-karamelnoe-pechenespec-0.jpg",
-        "type": "Мороженое",
-        "id": 26
-      },
-      {
-        "name": "Мороженое «Фисташковое»",
-        "description": "Фисташковое мороженое, сделанное из лучшего молока и тщательно отобранных фисташек с ароматом миндаля. Продукт может содержать следы арахиса и других орехов.",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertThumb/morozhenoe-fistashkovoe-2-320x320.jpg",
-        "type": "Мороженое",
-        "id": 27
-      },
-      {
-        "name": "Мороженое Бельгийское Пралине",
-        "description": "Сливочное мороженое с фундуком и кусочками карамелизированного фундука.",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-praline-2-0.jpg",
-        "type": "Мороженое",
-        "id": 28
-      },
-      {
-        "name": "Мороженое Киви и банан",
-        "description": "Молочное банановое мороженое и сорбет из киви с соусом из киви",
-        "price": 300,
-        "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-kivi-i-banan-0.jpg",
-        "type": "Мороженое",
-        "id": 29
-      },
-      {
-        "name": "Какао с маршмеллоу",
-        "description": "Отправляемся в сладкое плавание в хорошей компании — горячий какао с молоком, нежная молочная пенка и ванильный маршмеллоу",
-        "price": 180,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/84419bf4a2ed4e55895df5f3a46a5af6_366x366.jpeg",
-        "type": "Напитки",
-        "id": 30
-      },
-      {
-        "name": "Кофе Американо",
-        "description": "Пара глотков горячего Американо, и вы будете готовы покорять этот день",
-        "price": 120,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/e2fcf524bce74544ba7915a74f485446_366x366.jpeg",
-        "type": "Напитки",
-        "id": 31
-      },
-      {
-        "name": "Кофе Капучино",
-        "description": "Молочное банановое мороженое и сорбет из киви с соусом из киви",
-        "price": 150,
-        "picture": "Король среди кофейных напитков — классический капучино. Для любителей сбалансированного кофейно-молочного вкуса",
-        "type": "Напитки",
-        "id": 32
-      },
-      {
-        "name": "Кофе Латте",
-        "description": "Когда хочется нежную молочную пенку, на помощь приходит классический латте",
-        "price": 150,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/af8e68f81761479b9e745f4592e67ef3_366x366.jpeg",
-        "type": "Напитки",
-        "id": 33
-      },
-      {
-        "name": "Малиновый пунш",
-        "description": "Согревающий напиток на основе пюре малины и черной смородины",
-        "price": 120,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/8a998b44a37c4fc4ad34b40109c8c9ce_1875x1875.jpeg",
-        "type": "Напитки",
-        "id": 34
-      },
-      {
-        "name": "Сок вишня",
-        "description": "Сок вишня",
-        "price": 200,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/a11797d070a144c6b3a507b7654abcf5_1875x1875.jpeg",
-        "type": "Напитки",
-        "id": 35
-      },
-      {
-        "name": "Сок яблоко",
-        "description": "Сок яблоко",
-        "price": 200,
-        "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/c6ebd51a6b66439aba4782c958c84a44_1875x1875.jpeg",
-        "type": "Напитки",
-        "id": 36
-      }
-    ]
-  }
+  "products": [
+    {
+      "name": "Ягодный микс",
+      "description": "Чернично-смородиновые макаронс",
+      "price": 120,
+      "picture": "https://images.pexels.com/photos/3969250/pexels-photo-3969250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "type": "Макарон",
+      "id": 1
+    },
+    {
+      "name": "Шоколадные",
+      "description": "Шоколадные макаронс с карамельной начинкой",
+      "price": "120",
+      "picture": "https://images.pexels.com/photos/5176995/pexels-photo-5176995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 2
+    },
+    {
+      "name": "Клубничка",
+      "description": "Клубничные макаронс со сливочной начинкой",
+      "price": 120,
+      "picture": "https://images.pexels.com/photos/5720907/pexels-photo-5720907.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 3
+    },
+    {
+      "name": "Крем-брюле",
+      "description": "Сливочные макаронс со вкусом крем-брюле",
+      "price": 120,
+      "picture": "https://images.pexels.com/photos/8625954/pexels-photo-8625954.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 4
+    },
+    {
+      "name": "Малиновые",
+      "description": "Воздушные макаронс с малиновой начинкой",
+      "price": 120,
+      "picture": "https://images.pexels.com/photos/11065339/pexels-photo-11065339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 5
+    },
+    {
+      "name": "Лимонные",
+      "description": "Нежнейшие макаронс со сливочно-лимонной начинкой",
+      "price": 120,
+      "picture": "https://images.pexels.com/photos/3969253/pexels-photo-3969253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 6
+    },
+    {
+      "name": "Карамельно-шоколадный микс",
+      "description": "Шоколадные макаронс с карамельной начинкой",
+      "price": 450,
+      "picture": "https://images.pexels.com/photos/7440175/pexels-photo-7440175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 7
+    },
+    {
+      "name": "Ягодное ассорти",
+      "description": "Ягодно-сливочное ассорти",
+      "price": 450,
+      "picture": "https://images.pexels.com/photos/7296705/pexels-photo-7296705.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 8
+    },
+    {
+      "name": "Шоколадное ассорти",
+      "description": "Шоколадное ассорти со сливочной начинкой",
+      "price": 450,
+      "picture": "https://images.pexels.com/photos/8718009/pexels-photo-8718009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 9
+    },
+    {
+      "name": "Яркая композиция",
+      "description": "Фруктово-ягодное ассорти со сливочной начинкой",
+      "price": 450,
+      "picture": "https://images.pexels.com/photos/6277485/pexels-photo-6277485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 10
+    },
+    {
+      "name": "Ореховое ассорти",
+      "description": "Воздушные макаронс со вкусом фисташки",
+      "price": 500,
+      "picture": "https://images.pexels.com/photos/8963942/pexels-photo-8963942.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 11
+    },
+    {
+      "name": "Ягодно-шоколадное ассорти",
+      "description": "Шоколадные макаронс с ягодным вкусом",
+      "price": 500,
+      "picture": "https://svetofor.info/images/thumbnails/500/500/detailed/74/apple-iphone-se-silver_2c7c-lk.jpghttps://images.pexels.com/photos/5786389/pexels-photo-5786389.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Макарон",
+      "id": 12
+    },
+    {
+      "name": "Бисквитный торт со сливочным кремом",
+      "description": "Сочетание кексовых коржей, белого шоколада и вкуснейшей солоной карамели",
+      "price": 850,
+      "picture": "https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Торты",
+      "id": 13
+    },
+    {
+      "name": "Чизкейк New-York",
+      "description": "Легендарный сливочный вкус! Сочетание творожно-сливочной массы и плотного песочного коржа",
+      "price": 1300,
+      "picture": "https://images.pexels.com/photos/162688/cheesecake-table-dessert-cream-162688.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Торты",
+      "id": 14
+    },
+    {
+      "name": "Тирамису",
+      "description": "Легендарный вкус воплощён в нежном торте с сыром Маскарпоне и украшен какао посыпкой",
+      "price": 1200,
+      "picture": "https://images.pexels.com/photos/7783243/pexels-photo-7783243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Торты",
+      "id": 15
+    },
+    {
+      "name": "Свадебный медовик",
+      "description": "Класический медовик со сливочным кремом и ягодами украсят важное торжество.",
+      "price": 25000,
+      "picture": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "Торты",
+      "id": 16
+    },
+    {
+      "name": "Шоколадный",
+      "description": "Нежный бисквит с шоколадной начинкой. Сверху покрыт толстым слоем шоколада.",
+      "price": 2500,
+      "picture": "https://images.pexels.com/photos/11076351/pexels-photo-11076351.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "type": "Торты",
+      "id": 17
+    },
+    {
+      "name": "Красный бархат",
+      "description": "Трехслойный торт с шоколадными прослойками и нежнейшим сливочным кремом с белым шоколадом.",
+      "price": 2500,
+      "picture": "https://cheese-cake.ru/DesertImg/tort-red-velvet-3-2-1.jpg",
+      "type": "Торты",
+      "id": 18
+    },
+    {
+      "name": "Праздничный",
+      "description": "Трехслойный торт на основе ягодного мусса с белым шоколадом и оригинальным дизайном.",
+      "price": 3000,
+      "picture": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "Торты",
+      "id": 19
+    },
+    {
+      "name": "Вупи пай",
+      "description": "Праздничный торт Whoopie Pie украшенный свежими ягодами, печеньм Орео и шоколадками.",
+      "price": 2100,
+      "picture": "https://www.tortfamily.ru/image/cache/data/catalog/prazdnichnye/p1614-500x500.jpg",
+      "type": "Торты",
+      "id": 20
+    },
+    {
+      "name": "Мороженое Бельгийский шоколад",
+      "description": "Пломбир с темным бельгийским шоколадом",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskij-shokolad-2-1.jpg",
+      "type": "Мороженое",
+      "id": 21
+    },
+    {
+      "name": "Мороженое Крем-карамель",
+      "description": "Мороженое со сливочным ароматом и соусом из мягкой карамели",
+      "price": "22222222",
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-krem-karamel-2-0.jpg",
+      "type": "Мороженое",
+      "id": 22
+    },
+    {
+      "name": "Мороженое кофе со сливками",
+      "description": "Сливочное мороженое и кофейное мороженое с кусочками кофейного шоколада.",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertThumb/morozhenoe-kofe-so-slivkami-2-320x320.jpg",
+      "type": "Мороженое",
+      "id": 23
+    },
+    {
+      "name": "Мороженое Черная и белая вишня",
+      "description": "Сливочное вишневое мороженое с йогуртом и насыщенный вишневый сорбет с кусочками вишни",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-chernaya-i-belaya-vishnyaspdc-0.jpg",
+      "type": "Мороженое",
+      "id": 24
+    },
+    {
+      "name": "Мороженое Бельгийское карамельное печенье",
+      "description": "Сливочное карамельное мороженое с кусочками традиционного бельгийского сахарного печенья с корицей.",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-karamelnoe-pechenespec-0.jpg",
+      "type": "Мороженое",
+      "id": 25
+    },
+    {
+      "name": "Мороженое Бельгийское карамельное печенье",
+      "description": "Сливочное карамельное мороженое с кусочками традиционного бельгийского сахарного печенья с корицей.",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-karamelnoe-pechenespec-0.jpg",
+      "type": "Мороженое",
+      "id": 26
+    },
+    {
+      "name": "Мороженое «Фисташковое»",
+      "description": "Фисташковое мороженое, сделанное из лучшего молока и тщательно отобранных фисташек с ароматом миндаля. Продукт может содержать следы арахиса и других орехов.",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertThumb/morozhenoe-fistashkovoe-2-320x320.jpg",
+      "type": "Мороженое",
+      "id": 27
+    },
+    {
+      "name": "Мороженое Бельгийское Пралине",
+      "description": "Сливочное мороженое с фундуком и кусочками карамелизированного фундука.",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-belgijskoe-praline-2-0.jpg",
+      "type": "Мороженое",
+      "id": 28
+    },
+    {
+      "name": "Мороженое Киви и банан",
+      "description": "Молочное банановое мороженое и сорбет из киви с соусом из киви",
+      "price": 300,
+      "picture": "https://cheese-cake.ru/DesertImg/morozhenoe-kivi-i-banan-0.jpg",
+      "type": "Мороженое",
+      "id": 29
+    },
+    {
+      "name": "Какао с маршмеллоу",
+      "description": "Отправляемся в сладкое плавание в хорошей компании — горячий какао с молоком, нежная молочная пенка и ванильный маршмеллоу",
+      "price": 180,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/84419bf4a2ed4e55895df5f3a46a5af6_366x366.jpeg",
+      "type": "Напитки",
+      "id": 30
+    },
+    {
+      "name": "Кофе Американо",
+      "description": "Пара глотков горячего Американо, и вы будете готовы покорять этот день",
+      "price": 120,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/e2fcf524bce74544ba7915a74f485446_366x366.jpeg",
+      "type": "Напитки",
+      "id": 31
+    },
+    {
+      "name": "Кофе Капучино",
+      "description": "Молочное банановое мороженое и сорбет из киви с соусом из киви",
+      "price": 150,
+      "picture": "Король среди кофейных напитков — классический капучино. Для любителей сбалансированного кофейно-молочного вкуса",
+      "type": "Напитки",
+      "id": 32
+    },
+    {
+      "name": "Кофе Латте",
+      "description": "Когда хочется нежную молочную пенку, на помощь приходит классический латте",
+      "price": 150,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/af8e68f81761479b9e745f4592e67ef3_366x366.jpeg",
+      "type": "Напитки",
+      "id": 33
+    },
+    {
+      "name": "Малиновый пунш",
+      "description": "Согревающий напиток на основе пюре малины и черной смородины",
+      "price": 120,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/8a998b44a37c4fc4ad34b40109c8c9ce_1875x1875.jpeg",
+      "type": "Напитки",
+      "id": 34
+    },
+    {
+      "name": "Сок вишня",
+      "description": "Сок вишня",
+      "price": 200,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/a11797d070a144c6b3a507b7654abcf5_1875x1875.jpeg",
+      "type": "Напитки",
+      "id": 35
+    },
+    {
+      "name": "Сок яблоко",
+      "description": "Сок яблоко",
+      "price": 200,
+      "picture": "https://dodopizza-a.akamaihd.net/static/Img/Products/c6ebd51a6b66439aba4782c958c84a44_1875x1875.jpeg",
+      "type": "Напитки",
+      "id": 36
+    }
+  ]
+}
