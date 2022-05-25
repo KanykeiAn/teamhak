@@ -12,7 +12,7 @@ import { ADMIN } from "../helpers/consts";
 import ProductsPage from "../pages/ProductsPage";
 import PayCard from "../components/payCard/PayCard";
 
-import NoveltiesPage from "../pages/NoveltiesPage";
+// import NoveltiesPage from "../pages/NoveltiesPage";
 import FavoritesPage from "../pages/FavoritesPage";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Registration";
@@ -37,56 +37,56 @@ const MainRoutes = () => {
     //   id: 3,
     // },
 
-    {
-      link: "/novelties",
-      element: <NoveltiesPage />,
-      id: 4,
-    },
+    // {
+    //   link: "/novelties",
+    //   element: <NoveltiesPage />,
+    //   id: 4,
+    // },
     {
       link: "/novella",
       element: <ProductsPage />,
-      id: 5,
+      id: 3,
     },
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 6,
+      id: 4,
     },
     {
       link: "/cart",
       element: <CartPage />,
-      id: 7,
+      id: 5,
     },
 
     {
-      link: "/products/:id",
+      link: "/novella/:id",
       element: <ProductDetailsPage />,
-      id: 8,
+      id: 6,
     },
     {
       link: "/paycard",
       element: <PayCard />,
-      id: 9,
+      id: 7,
     },
     {
       link: "/favorites",
       element: <FavoritesPage />,
-      id: 10,
+      id: 8,
     },
     {
       link: "/login",
       element: <Login />,
-      id: 11,
+      id: 9,
     },
     {
       link: "/register",
       element: <Register />,
-      id: 12,
+      id: 10,
     },
     {
       link: "/activation",
       element: <Activation />,
-      id: 13,
+      id: 11,
     },
     // {
     //   link: "/logout",

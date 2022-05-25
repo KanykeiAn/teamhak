@@ -101,6 +101,48 @@ const Home = () => {
         </Box>
       </div> */}
 
+<Splide className="splide"> 
+        <SplideSlide> 
+          <img 
+            src="https://vsthemes.org/uploads/posts/2021-09/1632784059_1167804.jpg" 
+            alt="Image 1" 
+            style={{ 
+              maxWidth: "100%", 
+            }} 
+          /> 
+        </SplideSlide> 
+ 
+        <SplideSlide> 
+          <img 
+            src="https://a-static.besthdwallpaper.com/dzyudzyutsu-kaysen-satoru-godzyo-oboi-1920x1080-77018_48.jpg" 
+            alt="Image 2" 
+            style={{ 
+              maxWidth: "100%", 
+            }} 
+          /> 
+        </SplideSlide> 
+ 
+        <SplideSlide> 
+          <img 
+            src="https://i.artfile.ru/1927x1085_861451_[www.ArtFile.ru].jpg" 
+            alt="Image 3" 
+            style={{ 
+              maxWidth: "100%", 
+            }} 
+          /> 
+        </SplideSlide> 
+ 
+        <SplideSlide> 
+          <img 
+            src="https://i.pinimg.com/originals/0d/17/d9/0d17d96f0e9521950729d4cff602f07a.jpg" 
+            alt="Image 4" 
+            style={{ 
+              maxWidth: "100%", 
+            }} 
+          /> 
+        </SplideSlide> 
+      </Splide>
+
       <div className="uuu">
         <img
           className="aaa"

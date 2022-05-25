@@ -21,9 +21,8 @@ import Search from "./Search";
 
 const pages = [
   { name: "About Us", link: "/about", id: 1 },
-  { name: "Novelties", link: "/novelties", id: 2 },
-  { name: "Novella", link: "/novella", id: 3 },
-  { name: "Auth", link: "/auth", id: 4 },
+  { name: "Novella", link: "/novella", id: 2 },
+  { name: "Auth", link: "/auth", id: 3 },
 ];
 
 const Navbar = () => {
@@ -71,9 +70,12 @@ const Navbar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link to="/">
-              {" "}
-              <p className="logo">Renobolib</p>
+            <Link to="/"> 
+              {" "} 
+              <img 
+                src="https://images.ctfassets.net/8cd2csgvqd3m/3o6RN06GNoDMAyJhVqftSZ/4822ba988465f56310bddec0f4151bd2/B_O_Black.svg" 
+                alt="kk" 
+              /> 
             </Link>
           </Typography>
 
@@ -161,11 +163,11 @@ const Navbar = () => {
             ) : (
               <Link to="/cart">
                 <Button sx={{ my: 2, color: "#262424" }}>
-                  <img
+                  {/* <img
                     className="lll"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
                     alt="favorites"
-                  />
+                  /> */}
 
                   <Badge badgeContent={count} color="error">
                     <ShoppingCartIcon
