@@ -19,11 +19,13 @@ const INIT_STATE = {
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case ACTIONS.GET_PRODUCTS:
-      return { ...state, products: action.payload }
+      return { ...state, products: action.payload };
     case ACTIONS.GET_PRODUCT_DETAILS:
-      return { ...state, productDetails: action.payload }
+      return { ...state, productDetails: action.payload };
       case ACTIONS.GET_COMMENTS:
-      return { ...state, comments: action.payload }
+      return { ...state, comments: action.payload };
+      case ACTIONS.GET_CATEGORY:
+      return { ...state, categorys: action.payload };
     default:
       return state
   }
@@ -60,18 +62,26 @@ const ProductContextProvider = ({ children }) => {
     });
   };
 
+  const getText = async (id) => {
+    const { data } = await axios(`${JSON_API_PRODUCTS}${id}`);
+    dispatch({
+      type: ACTIONS.GET_PRODUCT_DETAILS,
+      payload: data,
+    });
+  };
+
 
   const addProduct = async (newProduct) => {
 
     let token = JSON.parse(localStorage.getItem('token'));
 
     const config ={
-      headers: {'Content-Type':'multipart/form-data',
       Authorization: `Bearer ${token.access}`,
-
+      headers: {'Content-Type':'multipart/form-data',
+      
     },
-    };
-console.log(newProduct);
+  };
+  console.log(newProduct);
 
     let newProduct2 = new FormData()
     newProduct2.append('title', newProduct.title)
@@ -84,6 +94,19 @@ console.log(newProduct);
     await axios.post(`${JSON_API_PRODUCTS}`, newProduct2,config)
     getProducts()
   }
+
+  const getCategory = async () => {
+
+    const { data } = await axios(
+      `${JSON_API_PRODUCTS}genres/`
+    );
+    // console.log(data)
+
+    dispatch({
+      type: ACTIONS.GET_CATEGORY,
+      payload: data,
+    });
+  };
 
   const deleteProduct = async (id) => {
     let token = JSON.parse(localStorage.getItem('token'));
@@ -101,39 +124,39 @@ console.log(newProduct);
 
   const saveEditedProduct = async (newProduct) => {
     let token = JSON.parse(localStorage.getItem('token'));
+
+
     const Authorization = `Bearer ${token.access}`;
 
-    const config ={
-      headers: {'Content-Type':'multipart/form-data',
-      Authorization: `Bearer ${token.access}`,
 
-    },
-    };
-    let newProduct2 = new FormData()
-    newProduct2.append('title', newProduct.title)
-    newProduct2.append('genre', newProduct.genre)
-    newProduct2.append('price', newProduct.price)
-    newProduct2.append('description', newProduct.description)
-    newProduct2.append('release_date', newProduct.release_date)
-    newProduct2.append('id', newProduct.id)
-    if(  typeof newProduct.image !== 'string') {
-      newProduct2.append('images', newProduct.images)
+    // const config ={
+    //     headers: {'Content-Type':'multipart/form-data'}
+    //   }
 
-    }
-
-    let id = newProduct2.get('id')
- 
-    await axios.patch(`${JSON_API_PRODUCTS}${id}/`, newProduct2,config);
+    let newEditProduct = new FormData()
+      newEditProduct.append('title', newProduct.title)
+      newEditProduct.append('genre', newProduct.genre)
+      newEditProduct.append('price', newProduct.price)
+      newEditProduct.append('description', newProduct.description)
+      newEditProduct.append('id', newProduct.id)
+      if(typeof(newProduct.images) !== 'string'){
+      newEditProduct.append('images', newProduct.images)
+      }
+      let id = newEditProduct.get('id')
+      
+      
+    await axios.patch(`${JSON_API_PRODUCTS}${id}`, newEditProduct, {
+        headers: { Authorization },
+      });
     getProducts()
-
-  }
+  };
 
   const fetchByParams = async(query, value)=>{
 if(value==='all'){
   getProducts()
 }else{
     
-  const { data } = await axios(`${JSON_API_PRODUCTS}filter/?${query}=${value}`)
+  const { data } = await axios(`${JSON_API_PRODUCTS}filtration/?${query}=${value}`)
 
   dispatch({
     type: ACTIONS.GET_PRODUCTS,
@@ -224,8 +247,9 @@ if(value==='all'){
     searchFilter,
     toggleLike,
     getComments,
-    addComment
-    
+    addComment,
+    getCategory,
+    getText,
   }}
   >{children}</productContext.Provider>
 };

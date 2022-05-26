@@ -20,9 +20,8 @@ import { ADMIN } from "../../helpers/consts";
 import Search from "./Search";
 
 const pages = [
-  { name: "About Us", link: "/about", id: 1 },
-  { name: "Novella", link: "/novella", id: 2 },
-  { name: "Auth", link: "/auth", id: 3 },
+  // { name: "About Us", link: "/about", id: 1 },
+  { name: "Novella", link: "/novella", id: 1 },
 ];
 
 const Navbar = () => {
@@ -156,11 +155,29 @@ const Navbar = () => {
 
             {/* <Product /> */}
 
-            {email == ADMIN ? (
-              <Link to="/admin">
-                <Button sx={{ my: 2, color: "#262424" }}>ADMIN PAGE</Button>
+            {/* {pages.map((page) => (
+              <Link to={page.link} key={page.id}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ ml: 'auto',my: 2, color: 'black', display: 'block'}}
+                  className='navbar-item'
+                >
+                  {page.name}
+                </Button>
               </Link>
-            ) : (
+            ))}  */}
+
+            {user === ADMIN ? (
+              <Link to={'/admin'}>
+                <Button  
+                 sx={{ ml: 'auto',my: 2, color: 'black', display: 'block'}}
+                 className='navbar-item'
+                >
+                 ADMIN PANEL
+                </Button>
+              </Link>
+
+             ) : ( 
               <Link to="/cart">
                 <Button sx={{ my: 2, color: "#262424" }}>
                   {/* <img
@@ -176,7 +193,7 @@ const Navbar = () => {
                   </Badge>
                 </Button>
               </Link>
-             )} 
+             )}  
           </Box>
 
           <Search />
