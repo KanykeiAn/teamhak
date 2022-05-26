@@ -1,6 +1,6 @@
 import React from "react";
 import "../home/Home.css";
-import Video from "../assets/homeimage/video1.mp4";
+import Video from "../assets/homeimage/v.mp4";
 import { Box, Container } from "@mui/system";
 import { Grid } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -9,157 +9,72 @@ import "@splidejs/react-splide/css/sea-green";
 const Home = () => {
   return (
     <>
-      {/* <div>
-        <Box>
-          <Grid
-            sx={{
-              alignItems: "space-around",
-              flexWrap: "wrap",
-              backgroundColor: "rgb(238,238,238)",
-              width: "100%",
-              // maxWidth: "100%",
-              height: "0%",
+      <Splide className="splide">
+        <SplideSlide>
+          <img
+            src="https://vsthemes.org/uploads/posts/2021-09/1632784059_1167804.jpg"
+            alt="Image 1"
+            style={{
+              maxWidth: "100%",
             }}
-          >
-            <Grid item md={4}>
-              <Splide
-                options={{ rewind: true, zIndex: 2 }}
-                aria-label="My Favorite Images"
-              >
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/f95b5fd1e2b3b4/original/PH157405-crop002.jpg?f=xxl"
-                      alt="Image 1"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
+          />
+        </SplideSlide>
 
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/60c10e5d0cbb38bb/original/PH157836-crop004.jpg?f=xxl"
-                      alt="Image 2"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
+        <SplideSlide>
+          <img
+            src="https://a-static.besthdwallpaper.com/dzyudzyutsu-kaysen-satoru-godzyo-oboi-1920x1080-77018_48.jpg"
+            alt="Image 2"
+            style={{
+              maxWidth: "100%",
+            }}
+          />
+        </SplideSlide>
 
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/2518ca5862da7907/original/PH176567.jpg?f=xxl"
-                      alt="Image 3"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
+        <SplideSlide>
+          <img
+            src="https://i.artfile.ru/1927x1085_861451_[www.ArtFile.ru].jpg"
+            alt="Image 3"
+            style={{
+              maxWidth: "100%",
+            }}
+          />
+        </SplideSlide>
 
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/66233fac36591a37/original/PH159924-crop001.jpg?f=xxl"
-                      alt="Image 4"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/6dc2f6f5c3e8d48d/original/PH156888-crop001.jpg?f=xxl"
-                      alt="Image 5"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
-                <SplideSlide>
-                  <Container>
-                    <img
-                      src="https://www.ikea.com/ext/ingkadam/m/48b4920fdbbf14a1/original/PH156264-crop001.jpg?f=xxl"
-                      alt="Image 6"
-                      style={{
-                        maxWidth: "100vw",
-                      }}
-                    />
-                  </Container>
-                </SplideSlide>
-              </Splide>
-            </Grid>
-          </Grid>
-        </Box>
-      </div> */}
-
-<Splide className="splide"> 
-        <SplideSlide> 
-          <img 
-            src="https://vsthemes.org/uploads/posts/2021-09/1632784059_1167804.jpg" 
-            alt="Image 1" 
-            style={{ 
-              maxWidth: "100%", 
-            }} 
-          /> 
-        </SplideSlide> 
- 
-        <SplideSlide> 
-          <img 
-            src="https://a-static.besthdwallpaper.com/dzyudzyutsu-kaysen-satoru-godzyo-oboi-1920x1080-77018_48.jpg" 
-            alt="Image 2" 
-            style={{ 
-              maxWidth: "100%", 
-            }} 
-          /> 
-        </SplideSlide> 
- 
-        <SplideSlide> 
-          <img 
-            src="https://i.artfile.ru/1927x1085_861451_[www.ArtFile.ru].jpg" 
-            alt="Image 3" 
-            style={{ 
-              maxWidth: "100%", 
-            }} 
-          /> 
-        </SplideSlide> 
- 
-        <SplideSlide> 
-          <img 
-            src="https://i.pinimg.com/originals/0d/17/d9/0d17d96f0e9521950729d4cff602f07a.jpg" 
-            alt="Image 4" 
-            style={{ 
-              maxWidth: "100%", 
-            }} 
-          /> 
-        </SplideSlide> 
+        <SplideSlide>
+          <img
+            src="https://i.pinimg.com/originals/0d/17/d9/0d17d96f0e9521950729d4cff602f07a.jpg"
+            alt="Image 4"
+            style={{
+              maxWidth: "100%",
+            }}
+          />
+        </SplideSlide>
       </Splide>
 
-      <div className="uuu">
-        <img
-          className="aaa"
-          src="https://ranobelib.me/uploads/cover/baegjagga-dolyeonnim-eun-heugmabeobsa/cover/LWNspoBkk1Lv_250x350.jpg"
-          alt="manga"
-        />
-        <img
-          className="bbb"
-          src="https://mangalib.me/uploads/cover/fairy-kings-daily-life/cover/cover_250x350.jpg"
-          alt="manga"
-        />
-        <img
-          className="ccc"
-          src="https://ranobelib.me/uploads/cover/manadeshi-ni-uragirarete-shinda-ossan-yuusha-shijou-saikyou-no-maou-toshite-ikikaeru-novel/cover/OLO2meoRpG6m_250x350.jpg"
-          alt="manga"
-        />
-      </div>
+      <Box
+        sx={{
+          flexWrap: { xs: "wrap", sm: "wrap" },
+          width: "100%",
+        }}
+      >
+        <div className="uuu">
+          <img
+            className="aaa"
+            src="https://ranobelib.me/uploads/cover/baegjagga-dolyeonnim-eun-heugmabeobsa/cover/LWNspoBkk1Lv_250x350.jpg"
+            alt="manga"
+          />
+          <img
+            className="bbb"
+            src="https://mangalib.me/uploads/cover/fairy-kings-daily-life/cover/cover_250x350.jpg"
+            alt="manga"
+          />
+          <img
+            className="ccc"
+            src="https://ranobelib.me/uploads/cover/manadeshi-ni-uragirarete-shinda-ossan-yuusha-shijou-saikyou-no-maou-toshite-ikikaeru-novel/cover/OLO2meoRpG6m_250x350.jpg"
+            alt="manga"
+          />
+        </div>
+      </Box>
 
       <div className="ddd">
         <font size="4" color="black" face="Courier New">
@@ -173,14 +88,12 @@ const Home = () => {
         </font>
       </div>
 
-      <Grid
-        container
+      <Box
         maxWidth="xl"
         sx={{
           display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
           justifyContent: "center",
+          flexWrap: "wrap",
         }}
         spacing={1}
       >
@@ -189,8 +102,7 @@ const Home = () => {
             <source src={Video} type="video/mp4" />
           </video>
         </div>
-      </Grid>
-
+      </Box>
       <div className="ggg">
         <font className="h1" size="6" color="black" face="Courier New bold">
           Everything we’ve done has leds to this moment.
@@ -212,7 +124,7 @@ const Home = () => {
         />
         <img
           className="lll"
-          src="https://ranobelib.me/uploads/cover/xiu-luo-wu-shen-novel/cover/5XBhGMZGR5In_250x350.jpg"
+          src="https://mangalib.me/uploads/cover/mawang-ui-ttallo-taeeonassseubnida/cover/5h9bT68pSGo7_250x350.jpg"
           alt="manga"
         />
         <img
