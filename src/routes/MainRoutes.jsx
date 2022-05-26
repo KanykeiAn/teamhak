@@ -8,7 +8,7 @@ import ProductDetailsPage from "../pages/ProductDetailsPage";
 import EditProductPage from "../pages/EditProductPage";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
-// import AboutUsPage from "../pages/AboutUsPage";
+import AboutUsPage from "../pages/AboutUsPage";
 import ProductsPage from "../pages/ProductsPage";
 import PayCard from "../components/payCard/PayCard";
 
@@ -31,11 +31,11 @@ const MainRoutes = () => {
       element: <HomePage />,
       id: 2,
     },
-    // {
-    //   link: "/about",
-    //   element: <AboutUsPage />,
-    //   id: 3,
-    // },
+    {
+      link: "/about",
+      element: <AboutUsPage />,
+      id: 3,
+    },
 
     // {
     //   link: "/novelties",
@@ -45,48 +45,48 @@ const MainRoutes = () => {
     {
       link: "/novella",
       element: <ProductsPage />,
-      id: 3,
+      id: 4,
     },
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 4,
+      id: 5,
     },
     {
       link: "/cart",
       element: <CartPage />,
-      id: 5,
+      id: 6,
     },
 
     {
       link: "/novella/:id",
       element: <ProductDetailsPage />,
-      id: 6,
+      id: 7,
     },
     {
       link: "/paycard",
       element: <PayCard />,
-      id: 7,
+      id: 8,
     },
     {
       link: "/favorites",
       element: <FavoritesPage />,
-      id: 8,
+      id: 9,
     },
     {
       link: "/login",
       element: <Login />,
-      id: 9,
+      id: 10,
     },
     {
       link: "/register",
       element: <Register />,
-      id: 10,
+      id: 11,
     },
     {
       link: "/activation",
       element: <Activation />,
-      id: 11,
+      id: 12,
     },
     // {
     //   link: "/logout",
