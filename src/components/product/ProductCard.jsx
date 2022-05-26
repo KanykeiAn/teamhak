@@ -7,22 +7,22 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../../contexts/ProductContextProvider';
-import { IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 // import { MoreHoriz } from '@mui/icons-material';
 // import { Box } from '@mui/system';
-// import { ADMIN } from '../../helpers/consts';
+import { ADMIN } from '../../helpers/consts';
 // import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
 
   const { addProductToCart, checkProductInCart } = useCart();
-  // const { userName } = useAuth();
-  const { deleteProduct,toggleLike } = useProducts();
+  const { user } = useAuth();
+  const { deleteProduct,toggleLike, saveEditedProduct } = useProducts();
 
   // const {
   //   handleLogout,
@@ -69,27 +69,28 @@ export default function ProductCard({ item }) {
         </Typography> */}
       </CardContent>
       <CardActions>
-        {/* {email == ADMIN ? ( */}
+        {/* {user === ADMIN ? ( */}
           <>
             <Button size="small" onClick={() => deleteProduct(item.id)}>
               Delete
             </Button>
 
-            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+            <Button size="small" onClick={() => saveEditedProduct(item.id)}>
               Edit
             </Button>
           </>
-        {/* ) : ( */}
-          <>
-          <IconButton onClick={() => addProductToCart(item)}>
+        {/* ) : (   */}
+          <Box><IconButton onClick={() => addProductToCart(item)}>
             <ShoppingCartIcon
               color={checkProductInCart(item.id) ? 'primary' : ''}
             />
-          </IconButton>
-          <ThumbUpAltIcon  sx={{cursor: 'pointer'}} onClick={()=>toggleLike(item.id)}
-            />{item.likes}
-          </>
-        {/* )} */}
+            </IconButton> 
+            {user ? (<IconButton><ThumbUpAltIcon sx={{cursor: 'pointer',}} onClick={()=>toggleLike(item.id)}/>{item.likes}</IconButton>
+                ):(
+                  <IconButton><ThumbUpAltIcon sx={{cursor: 'pointer',}} onClick={()=>navigate('/login')}/>{item.likes}</IconButton>
+                  )}
+            </Box>
+         {/* )}   */}
       </CardActions>
     </Card>
   );

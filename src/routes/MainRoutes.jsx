@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import AuthPage from "../pages/AuthPage";
+// import AuthPage from "../pages/AuthPage";
 import HomePage from "../pages/HomePage";
 import AdminPage from "../pages/AdminPage";
 import CartPage from "../pages/CartPage";
@@ -17,19 +17,20 @@ import FavoritesPage from "../pages/FavoritesPage";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Registration";
 import Activation from "../components/auth/Activation";
+import ReadPage from "../pages/ReadPage";
 
 const MainRoutes = () => {
   const { user } = useAuth();
   const PUBLIC_ROUTES = [
-    {
-      link: "/auth",
-      element: <AuthPage />,
-      id: 1,
-    },
+    // {
+    //   link: "/auth",
+    //   element: <AuthPage />,
+    //   id: 1,
+    // },
     {
       link: "/",
       element: <HomePage />,
-      id: 2,
+      id: 1,
     },
     // {
     //   link: "/about",
@@ -45,47 +46,52 @@ const MainRoutes = () => {
     {
       link: "/novella",
       element: <ProductsPage />,
-      id: 3,
+      id: 2,
     },
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 4,
+      id: 3,
     },
     {
       link: "/cart",
       element: <CartPage />,
-      id: 5,
+      id: 4,
     },
 
     {
       link: "/novella/:id",
       element: <ProductDetailsPage />,
-      id: 6,
+      id: 5,
     },
     {
       link: "/paycard",
       element: <PayCard />,
-      id: 7,
+      id: 6,
     },
     {
       link: "/favorites",
       element: <FavoritesPage />,
-      id: 8,
+      id:7,
     },
     {
       link: "/login",
       element: <Login />,
-      id: 9,
+      id: 8,
     },
     {
       link: "/register",
       element: <Register />,
-      id: 10,
+      id: 9,
     },
     {
       link: "/activation",
       element: <Activation />,
+      id: 10,
+    },
+    {
+      link: "/read",
+      element: <ReadPage />,
       id: 11,
     },
     // {
@@ -109,27 +115,46 @@ const MainRoutes = () => {
   ];
 
   return (
-    <Routes>
-      {PUBLIC_ROUTES.map((item) => (
-        <Route path={item.link} element={item.element} key={item.id} />
-      ))}
+    // <Routes>
+    //   {PUBLIC_ROUTES.map((item) => (
+    //     <Route path={item.link} element={item.element} key={item.id} />
+    //   ))}
 
-      {user
-        ? PRIVATE_ROUTES.map((item) => (
-            <Route
-              path={item.link}
-              element={
-                user.email === ADMIN ? (
-                  item.element
-                ) : (
-                  <Navigate replace to="*" />
-                )
-              }
-              key={item.id}
-            />
-          ))
-        : null}
-    </Routes>
+    //   {user === ADMIN
+    //     ? PRIVATE_ROUTES.map((item) => (
+    //         <Route
+    //           path={item.link}
+    //           element={
+    //             user.email === ADMIN ? (
+    //               item.element
+    //             ) : (
+    //               <Navigate replace to="*" />
+    //             )
+    //           }
+    //           key={item.id}
+    //         />
+    //       ))
+    //     : null}
+    // </Routes>
+
+<Routes>
+{PUBLIC_ROUTES.map((item) => (
+  <Route path={item.link} element={item.element} key={item.id} />
+))}
+
+{user === ADMIN
+  ? (PRIVATE_ROUTES.map((item) => (
+      <Route
+        path={item.link}
+        element={item.element}
+        key={item.id}
+      />
+    )))
+  : null}
+
+
+
+</Routes>
   );
 };
 

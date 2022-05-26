@@ -12,18 +12,16 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { authContext, useAuth } from '../../contexts/AuthContextProvider';
-import { useNavigate } from 'react-router-dom';
-
+import { useAuth, authContext } from '../../contexts/AuthContextProvider';
 
 
 function Copyright(props) {
   return (
     <Typography
-    variant="body2"
-    color="text.secondary"
-    align="center"
-    {...props}
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
     >
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -39,15 +37,14 @@ const theme = createTheme();
 
 export default function Registration() {
   //   const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const data = new FormData(event.currentTarget);
-    //     console.log({
-      //       email: data.get('email'),
-      //       password: data.get('password'),
-      //     });
-      //   };
-      
-      const navigate = useNavigate();
+  //     event.preventDefault();
+  //     const data = new FormData(event.currentTarget);
+  //     console.log({
+  //       email: data.get('email'),
+  //       password: data.get('password'),
+  //     });
+  //   };
+
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const { register, error } = useAuth();
@@ -55,6 +52,7 @@ export default function Registration() {
   function handleRegister(email, password) {
     register({ email, password });
   }
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -68,9 +66,9 @@ export default function Registration() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
+          {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon /> */}
+          {/* </Avatar> */}
           <Typography component="h1" variant="h5">
             Registration
           </Typography>
@@ -109,24 +107,21 @@ export default function Registration() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+    
             <Button
               //   type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={() => {handleRegister(email, password); navigate('/activation')}}
+              onClick={() => handleRegister(email, password)}
             >
               Register
             </Button>
+     
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
