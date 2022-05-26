@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import SideBar from '../../components/product/SideBar'; 
+import SideBar from "../../components/product/SideBar";
 import { Badge } from "@mui/material";
 import { getCountProductsInCart } from "../../helpers/functions";
 import { useCart } from "../../contexts/CartContextProvider";
@@ -20,19 +20,17 @@ import { ADMIN } from "../../helpers/consts";
 import Search from "./Search";
 
 const pages = [
-  // { name: "About Us", link: "/about", id: 1 },
-  { name: "Novella", link: "/novella", id: 1 },
+  { name: "About Us", link: "/about", id: 1 },
+  { name: "Novella", link: "/novella", id: 2 },
 ];
 
 const Navbar = () => {
-
   const { user, checkAuth, logout } = useAuth();
 
   const navigate = useNavigate();
 
-
   React.useEffect(() => {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem("token")) {
       checkAuth();
     }
   }, []);
@@ -69,12 +67,12 @@ const Navbar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link to="/"> 
-              {" "} 
-              <img 
-                src="https://images.ctfassets.net/8cd2csgvqd3m/3o6RN06GNoDMAyJhVqftSZ/4822ba988465f56310bddec0f4151bd2/B_O_Black.svg" 
-                alt="kk" 
-              /> 
+            <Link to="/">
+              {" "}
+              <img
+                src="https://images.ctfassets.net/8cd2csgvqd3m/3o6RN06GNoDMAyJhVqftSZ/4822ba988465f56310bddec0f4151bd2/B_O_Black.svg"
+                alt="kk"
+              />
             </Link>
           </Typography>
 
@@ -168,16 +166,15 @@ const Navbar = () => {
             ))}  */}
 
             {user === ADMIN ? (
-              <Link to={'/admin'}>
-                <Button  
-                 sx={{ ml: 'auto',my: 2, color: 'black', display: 'block'}}
-                 className='navbar-item'
+              <Link to={"/admin"}>
+                <Button
+                  sx={{ ml: "auto", my: 2, color: "black", display: "block" }}
+                  className="navbar-item"
                 >
-                 ADMIN PANEL
+                  ADMIN PANEL
                 </Button>
               </Link>
-
-             ) : ( 
+            ) : (
               <Link to="/cart">
                 <Button sx={{ my: 2, color: "#262424" }}>
                   {/* <img
@@ -193,7 +190,7 @@ const Navbar = () => {
                   </Badge>
                 </Button>
               </Link>
-             )}  
+            )}
           </Box>
 
           <Search />
@@ -201,10 +198,10 @@ const Navbar = () => {
           {user ? (
             <Button
               color="inherit"
-              sx={{ color: 'black' }}
+              sx={{ color: "black" }}
               onClick={() => {
                 logout();
-                navigate('/login');
+                navigate("/login");
               }}
             >
               Logout
@@ -212,13 +209,13 @@ const Navbar = () => {
           ) : (
             <>
               <NavLink to="/login">
-                <Button color="inherit" sx={{ color: 'dark' }}>
+                <Button color="inherit" sx={{ color: "dark" }}>
                   Login
                 </Button>
               </NavLink>
 
               <NavLink to="/register">
-                <Button color="inherit" sx={{ color: 'dark' }}>
+                <Button color="inherit" sx={{ color: "dark" }}>
                   Register
                 </Button>
               </NavLink>
