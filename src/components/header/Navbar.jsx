@@ -27,6 +27,16 @@ const pages = [
 ];
 
 const Navbar = () => {
+  const { user, checkAuth, logout } = useAuth();
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      checkAuth();
+    }
+  }, []);
+
   const {
     handleLogout,
     user: { email },

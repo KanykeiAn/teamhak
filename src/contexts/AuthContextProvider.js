@@ -4,7 +4,7 @@ import { Route, useNavigate } from "react-router-dom";
 import { API1 } from "../helpers/consts";
 export const authContext = createContext();
 
-const API = 'http://35.239.251.89/';
+// const API = 'http://35.239.251.89/';
 
 export const useAuth = () => {
   return useContext(authContext);
@@ -100,6 +100,7 @@ const AuthContextProvider = ({ children }) => {
         error,
         checkAuth,
         logout,
+        activation,
       }}
     >
       {children}

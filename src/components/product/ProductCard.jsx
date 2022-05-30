@@ -19,30 +19,30 @@ import { useFavorites } from "../../contexts/FavoritesContextProvider";
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
 
-  const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart } = useCart();
   const { addProductToFavorites, checkProductInFavorites } = useFavorites();
 
-  const {
-    handleLogout,
-    user: { email },
-  } = useAuth();
-  console.log(email);
+  // const {
+  //   handleLogout,
+  //   user: { email },
+  // } = useAuth();
+  // console.log(email);
 
   return (
-    <Card sx={{ maxWidth: 330 }} className="cardd">
+    <Card sx={{ maxWidth: 330 }} className="cardd" >
       <CardMedia
         component="img"
         height="250"
-        image={item.picture}
-        alt={item.name}
+        image={item.images}
+        alt={item.title}
+        onClick={() => navigate(`/novella/${item.id}`)}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {item.name}
+          {item.title}
         </Typography>
 
-        <Typography
+        {/* <Typography
           gutterBottom
           variant="h5"
           component="div"
@@ -64,16 +64,16 @@ export default function ProductCard({ item }) {
           }}
         >
           {item.description}
-        </Typography>
+        </Typography> */}
       </CardContent>
       <CardActions>
-        {email == ADMIN ? (
+        {/* {user === ADMIN ? ( */}
           <>
             <Button size="small" onClick={() => deleteProduct(item.id)}>
               Delete
             </Button>
 
-            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+            <Button size="small" onClick={() => saveEditedProduct(item.id)}>
               Edit
             </Button>
           </>
@@ -91,7 +91,7 @@ export default function ProductCard({ item }) {
               />
             </IconButton>
           </>
-        )}
+        )
       </CardActions>
     </Card>
   );

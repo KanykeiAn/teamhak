@@ -1,6 +1,10 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+<<<<<<< HEAD
 import AuthPage from "../pages/AuthPage";
+=======
+// import AuthPage from "../pages/AuthPage";
+>>>>>>> main
 import HomePage from "../pages/HomePage";
 import AdminPage from "../pages/AdminPage";
 import CartPage from "../pages/CartPage";
@@ -12,8 +16,17 @@ import AboutUsPage from "../pages/AboutUsPage";
 import ProductsPage from "../pages/ProductsPage";
 import PayCard from "../components/payCard/PayCard";
 
+<<<<<<< HEAD
 import NoveltiesPage from "../pages/NoveltiesPage";
 import FavoritesPage from "../pages/FavoritesPage";
+=======
+// import NoveltiesPage from "../pages/NoveltiesPage";
+import FavoritesPage from "../pages/FavoritesPage";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Registration";
+import Activation from "../components/auth/Activation";
+import ReadPage from "../pages/ReadPage";
+>>>>>>> main
 
 const MainRoutes = () => {
   const { user } = useAuth();

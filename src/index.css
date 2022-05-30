@@ -42,9 +42,7 @@ a{
   
 }
 
-.bbb{
-  background: url("https://images.pexels.com/photos/3256807/pexels-photo-3256807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
+
 .side{
   position: relative;
 }
@@ -89,4 +87,34 @@ a{
 .jkl{
   position: relative;
   opacity: .7;
+}
+.nhnh{
+  color: black;
+}
+.gridtitle{
+  background-color: aqua;
+}
+/* .griddec{
+  background-color: blue;
+}
+.gridbut{
+  background-color: brown;
+}
+.gridaut{
+  background-color: darkgreen;
+} */
+
+.grid{
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.gridright{
+  margin-left: 6vw;
+  max-width: 55vw;
+}
+.jkjk{
+  width: 250px;
+  height: 400px;
+  border-radius: 8px;
 }
