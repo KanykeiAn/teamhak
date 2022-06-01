@@ -1,6 +1,10 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+<<<<<<< HEAD
+import AuthPage from "../pages/AuthPage";
+=======
 // import AuthPage from "../pages/AuthPage";
+>>>>>>> main
 import HomePage from "../pages/HomePage";
 import AdminPage from "../pages/AdminPage";
 import CartPage from "../pages/CartPage";
@@ -12,25 +16,30 @@ import AboutUsPage from "../pages/AboutUsPage";
 import ProductsPage from "../pages/ProductsPage";
 import PayCard from "../components/payCard/PayCard";
 
+<<<<<<< HEAD
+import NoveltiesPage from "../pages/NoveltiesPage";
+import FavoritesPage from "../pages/FavoritesPage";
+=======
 // import NoveltiesPage from "../pages/NoveltiesPage";
 import FavoritesPage from "../pages/FavoritesPage";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Registration";
 import Activation from "../components/auth/Activation";
 import ReadPage from "../pages/ReadPage";
+>>>>>>> main
 
 const MainRoutes = () => {
   const { user } = useAuth();
   const PUBLIC_ROUTES = [
-    // {
-    //   link: "/auth",
-    //   element: <AuthPage />,
-    //   id: 1,
-    // },
+    {
+      link: "/auth",
+      element: <AuthPage />,
+      id: 1,
+    },
     {
       link: "/",
       element: <HomePage />,
-      id: 1,
+      id: 2,
     },
     {
       link: "/about",
@@ -38,103 +47,42 @@ const MainRoutes = () => {
       id: 3,
     },
 
-    // {
-    //   link: "/novelties",
-    //   element: <NoveltiesPage />,
-    //   id: 4,
-    // },
     {
-      link: "/novella",
-      element: <ProductsPage />,
-
+      link: "/novelties",
+      element: <NoveltiesPage />,
       id: 4,
-
-      id: 2,
-
+    },
+    {
+      link: "/products",
+      element: <ProductsPage />,
+      id: 5,
     },
     {
       link: "/admin",
       element: <AdminPage />,
-
-      id: 5,
-
-      id: 3,
-
+      id: 6,
     },
     {
       link: "/cart",
       element: <CartPage />,
-
-      id: 6,
-
-      id: 4,
-
+      id: 7,
     },
 
     {
-      link: "/novella/:id",
+      link: "/products/:id",
       element: <ProductDetailsPage />,
-
-      id: 7,
-
-      id: 5,
-
+      id: 8,
     },
     {
       link: "/paycard",
       element: <PayCard />,
-
-      id: 8,
-
-      id: 6,
-
+      id: 9,
     },
     {
       link: "/favorites",
       element: <FavoritesPage />,
-
-      id: 9,
-
-      id:7,
-
-    },
-    {
-      link: "/login",
-      element: <Login />,
-
-      id: 10,
-
-      id: 8,
-
-    },
-    {
-      link: "/register",
-      element: <Register />,
-
-      id: 11,
-
-      id: 9,
-
-    },
-    {
-      link: "/activation",
-      element: <Activation />,
-
-      id: 12,
-
       id: 10,
     },
-    {
-      link: "/read",
-      element: <ReadPage />,
-      id: 11,
-
-    },
-    // {
-    //   link: "/logout",
-    //   element: <Acti />,
-    //   id: 13,
-    // },
   ];
 
   const PRIVATE_ROUTES = [
@@ -151,46 +99,27 @@ const MainRoutes = () => {
   ];
 
   return (
-    // <Routes>
-    //   {PUBLIC_ROUTES.map((item) => (
-    //     <Route path={item.link} element={item.element} key={item.id} />
-    //   ))}
+    <Routes>
+      {PUBLIC_ROUTES.map((item) => (
+        <Route path={item.link} element={item.element} key={item.id} />
+      ))}
 
-    //   {user === ADMIN
-    //     ? PRIVATE_ROUTES.map((item) => (
-    //         <Route
-    //           path={item.link}
-    //           element={
-    //             user.email === ADMIN ? (
-    //               item.element
-    //             ) : (
-    //               <Navigate replace to="*" />
-    //             )
-    //           }
-    //           key={item.id}
-    //         />
-    //       ))
-    //     : null}
-    // </Routes>
-
-<Routes>
-{PUBLIC_ROUTES.map((item) => (
-  <Route path={item.link} element={item.element} key={item.id} />
-))}
-
-{user === ADMIN
-  ? (PRIVATE_ROUTES.map((item) => (
-      <Route
-        path={item.link}
-        element={item.element}
-        key={item.id}
-      />
-    )))
-  : null}
-
-
-
-</Routes>
+      {user
+        ? PRIVATE_ROUTES.map((item) => (
+            <Route
+              path={item.link}
+              element={
+                user.email === ADMIN ? (
+                  item.element
+                ) : (
+                  <Navigate replace to="*" />
+                )
+              }
+              key={item.id}
+            />
+          ))
+        : null}
+    </Routes>
   );
 };
 

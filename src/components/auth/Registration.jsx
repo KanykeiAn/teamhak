@@ -12,7 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useAuth, authContext } from "../../contexts/AuthContextProvider";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
 function Copyright(props) {
   return (
@@ -34,7 +34,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function Registration() {
+export default function Register() {
   //   const handleSubmit = (event) => {
   //     event.preventDefault();
   //     const data = new FormData(event.currentTarget);
@@ -105,7 +105,6 @@ export default function Registration() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-
             <Button
               //   type="submit"
               fullWidth
@@ -115,11 +114,15 @@ export default function Registration() {
             >
               Register
             </Button>
-
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="#" variant="body2">
+                  {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
